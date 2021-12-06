@@ -25,7 +25,7 @@ TABLESPACE pg_default;
 ALTER TABLE IF EXISTS public.carteras
     OWNER to docker;
 	
-COPY carteras FROM '/var/shared_volume/carteras_invex_sem.txt' (DELIMITER(' '));
+COPY carteras FROM '/docker-entrypoint-initdb.d/carteras_invex_sem.txt' (DELIMITER(' '));
 
 -- Table: public.composicion
 
@@ -48,7 +48,7 @@ TABLESPACE pg_default;
 ALTER TABLE IF EXISTS public.composicion
     OWNER to docker;
 	
-COPY composicion FROM '/var/shared_volume/composicion_invex_sem.txt' (DELIMITER(' '));
+COPY composicion FROM '/docker-entrypoint-initdb.d/composicion_invex_sem.txt' (DELIMITER(' '));
 
 SELECT serie, calificacion, importe_mercado, porcentaje FROM composicion;
 -- Exportar un txt de este query 
