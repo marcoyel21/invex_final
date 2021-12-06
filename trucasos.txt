@@ -1,0 +1,10 @@
+ 
+### Para sacar arhivos
+ docker run --rm --entrypoint cat IMAGEN /semanal/scripts/composicion_invex_sem.txt > composicion_invex_sem.txt
+
+
+
+### Correr el docker postgress
+ docker run -e POSTGRES_USER=docker -e POSTGRES_PASSWORD=docker -e POSTGRES_DB=docker IMAGEN
+
+
